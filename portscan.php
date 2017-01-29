@@ -146,7 +146,7 @@ if($argv[1] == "-g"){
 
 	$shell = shell_exec("arp -a");
 
-	preg_match_all('/(192)\.(168)\.\d{1,3}\.\d{1,3}/', $shell, $matches);
+	preg_match_all('/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/', $shell, $matches);
 	
 
 	for($i = 0; $i <= sizeof($matches[0]); $i ++){
